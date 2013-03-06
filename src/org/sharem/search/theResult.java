@@ -5,11 +5,14 @@ import java.util.List;
 
 public class theResult {
 
+	String searchPattern = "";
+
 	OpenFile oF = new OpenFile();
 
 	public List<theLine> lines = new ArrayList<theLine>();
 
-	public theResult(){
+	public theResult(String theSearch){
+		searchPattern = theSearch;
 		populateLines();
 	}
 
@@ -17,10 +20,10 @@ public class theResult {
 
 		for (int i=0; i < oF.allLines.size(); i++){
 
-			theLine sample = new theLine(oF.allLines.get(i));
-
-			lines.add(sample);
-
+			if (oF.allLines.get(i).contains(searchPattern)){
+				theLine sample = new theLine(oF.allLines.get(i));
+				lines.add(sample);
+			}
 		}
 
 	}

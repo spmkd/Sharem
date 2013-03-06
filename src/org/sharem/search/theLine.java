@@ -3,7 +3,7 @@ package org.sharem.search;
 public class theLine {
 
 	String Type = "";
-	String Serial = "";
+	public String Serial = "";
 	String Seson = "";
 	String Episode = "";
 
@@ -33,7 +33,9 @@ public class theLine {
 
 		String[] splited = theFile.split("/");
 
-		String[] lastSpot = splited[3].split(".");
+		String tmp = splited[3];
+
+		String[] lastSpot = tmp.split("\\.");
 
 		String complete = splited[0] + splited[1] + splited[2] + lastSpot[0] + ".jpg";
 

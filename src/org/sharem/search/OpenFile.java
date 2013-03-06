@@ -13,7 +13,7 @@ public class OpenFile {
 	public OpenFile(){
 
 		try{
-			reader = new BufferedReader(new FileReader("/home/stole/listOfFiles.txt"));
+			reader = new BufferedReader(new FileReader("C:\\Users\\stojanp\\Desktop\\listOfFiles.txt"));
 		}catch(Exception e){ e.printStackTrace(); }
 
 		populateArray();

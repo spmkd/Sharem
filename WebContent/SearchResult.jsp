@@ -24,7 +24,7 @@ This is what was found:
 
 <%
 
-	theResult result = new theResult();
+	theResult result = new theResult(name);
 
 out.println("Total found: " + result.lines.size() + " </br>");
 
